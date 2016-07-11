@@ -30,7 +30,16 @@ gem 'jbuilder', '~> 2.5'
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
+gem 'bootstrap-sass'
+gem 'bootstrap_form'
+# gem 'bootstrap_form', github: 'fetch/rails-bootstrap-forms', ref: 'lazy-load'
+
 group :development, :test do
+  # rspec for testing
+  gem 'rspec', '~> 3.5.0'
+  gem 'rspec-rails', '~> 3.5.0'
+  gem 'rails-controller-testing'
+
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
 end
@@ -42,6 +51,7 @@ group :development do
   # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
   gem 'spring'
   gem 'spring-watcher-listen', '~> 2.0.0'
+  gem 'spring-commands-rspec', require: false
 end
 
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem

@@ -1,0 +1,12 @@
+<%= bootstrap_form_for(user) do |f| %>
+
+  <%= panel title: "#{pluralize(user.errors.count, "error")} prohibited this user from being saved:", context: :danger do %>
+    <%= f.error_summary %>
+  <% end if user.errors.any? %>
+
+  <%= f.text_field :first_name %>
+  <%= f.text_field :last_name %>
+  <%= f.text_field :email %>
+
+  <%= f.primary %>
+<% end %>
