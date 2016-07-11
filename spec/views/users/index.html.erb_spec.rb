@@ -3,12 +3,14 @@ require 'rails_helper'
 RSpec.describe "users/index", type: :view do
   before(:each) do
     assign(:users, [
-      User.create!(
+      User.new(
+        :id => 1,
         :first_name => "First Name",
         :last_name => "Last Name",
         :email => "Email"
       ),
-      User.create!(
+      User.new(
+        :id => 2,
         :first_name => "First Name",
         :last_name => "Last Name",
         :email => "Email"
