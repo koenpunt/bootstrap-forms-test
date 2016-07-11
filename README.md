@@ -8,15 +8,15 @@ A solution is proposed in [bootstrap-ruby/rails-bootstrap-forms#275](https://git
 
 1. Clone the repository:
 
-    git clone https://github.com/koenpunt/bootstrap-forms-test.git
+        git clone https://github.com/koenpunt/bootstrap-forms-test.git
 
 2. Install dependencies:
 
-    bundle install
+        bundle install
 
 3. Run specs:
 
-    bin/rspec
+        bin/rspec
 
 
 You'll see it errors out on not being able to find the path helpers.
