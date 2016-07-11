@@ -1,24 +1,24 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This project demonstrates an issue with helper load order when using [rails-bootstrap-forms](https://github.com/bootstrap-ruby/rails-bootstrap-forms) with RSpec.
 
-Things you may want to cover:
+A solution is proposed in [bootstrap-ruby/rails-bootstrap-forms#275](https://github.com/bootstrap-ruby/rails-bootstrap-forms/pull/275).
 
-* Ruby version
+## Running
 
-* System dependencies
+1. Clone the repository:
 
-* Configuration
+    git clone https://github.com/koenpunt/bootstrap-forms-test.git
 
-* Database creation
+2. Install dependencies:
 
-* Database initialization
+    bundle install
 
-* How to run the test suite
+3. Run specs:
 
-* Services (job queues, cache servers, search engines, etc.)
+    bin/rspec
 
-* Deployment instructions
 
-* ...
+You'll see it errors out on not being able to find the path helpers.
+
+Now when you update the `Gemfile`, and comment the `bootstrap_form` line, and uncomment the one with the GitHub source, and follow step 2 and 3 again, you'll see it will no longer fail.
